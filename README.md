@@ -1,1 +1,1 @@
-# DSC-106-Project-3
+# How Are Walking Patterns Affected by Neurodegenerative Disease?
