@@ -27,11 +27,11 @@
         <h3>Visualization Approach</h3>
         <p>We used a scatterplot to display our findings, analyzing the following six metrics:</p>
         <ul>
-            <li>Left Stride Interval (sec) vs. Right Stride Interval (sec)</li>
-            <li>Left Swing Interval (sec) vs. Right Swing Interval (sec)</li>
-            <li>Left Stance Interval (sec) vs. Right Stance Interval (sec)</li>
+            <li>Average Left Stride Interval (sec) vs. Average Right Stride Interval (sec)</li>
+            <li>Average Left Swing Interval (sec) vs. Average Right Swing Interval (sec)</li>
+            <li>Average Left Stance Interval (sec) vs. Average Right Stance Interval (sec)</li>
         </ul>
-        <p>We mapped left-side metrics on the y-axis and right-side metrics on the x-axis (for example, Left Swing vs. Right Swing), allowing users to track gait asymmetry in individual subjects. We took the averages of every individuals’ left-to-right gait metric ratio. </p>
+        <p>We mapped left-side metrics on the y-axis and right-side metrics on the x-axis (for example, Left Swing vs. Right Swing), allowing users to track gait asymmetry in individual subjects. We took the averages of every individuals’ left and right gait metrics. </p>
 
         <h3>Comparison of Visualization Methods</h3>
         <p>We initially tried using a histogram and a bar chart to visualize our findings, but decided that a scatter plot provided the most insight. The histogram only showed the left-to-right ratio distribution, and the bar chart only summarized the data for each disease. The scatterplot, on the other hand, allowed us to compare the ratios for each individual subject.</p>
@@ -42,7 +42,7 @@
         <h3>Color Coding & Interactivity</h3>
         <p>Each disease group is color-coded based on its awareness ribbon:</p>
         <div class="color-coding">
-            <span class="color-box gray"></span> Parkinson’s (Gray)
+            <span class="color-box gray"></span> Parkinson’s (Purple)
             <span class="color-box blue"></span> Huntington’s (Blue)
             <span class="color-box red"></span> ALS (Red)
             <span class="color-box black"></span> Healthy Control (Black)
@@ -50,22 +50,21 @@
         <p>Interactive features include:</p>
         <ul>
             <li><strong>Dynamic Filtering:</strong> Users are able to select and deselect disease groups to focus on specific comparisons. This allows for a focused comparison (for example, comparing only Parkinson’s and ALS or comparing all four groups at once)</li>
-            <li><strong>Tooltip Feature:</strong> Provides more detailed information on the individual: hovering over a data point reveals the exact values for that subject. </li>
+            <li><strong>Tooltip Feature:</strong> Provides more detailed information on the individual: Hovering over a data point reveals the exact values for that subject. </li>
         </ul>
         <p>We initially considered creating separate scatterplots for each disease, allowing side-by-side comparisons. However, we realized that combining all the disease groups into a single scatterplot per metric would be a better idea, as it simplifies comparison across diseases by consolidating data into a single plot and making patterns more apparent.</p>
 
         <h3>Development Process</h3>
-        <p>our team worked together closely throughout the project. For the checkpoint submission, each group member created 1-2 plots, which we then discussed the pros and cons of. We then spent several hours brainstorming the final visualization and deciding which features to implement, how to increase interactivity, and how to structure our GitHub page. </p>
-        <p>We split tasks efficiently:</p>
+        <p>Our team worked together closely throughout the project. For the checkpoint submission, each group member created 1-2 plots. We then spent several hours brainstorming the final visualization and deciding which features to implement, how to increase interactivity, and how to structure our GitHub page. </p>
+        <p>We split the major tasks:</p>
         <ul class="team-roles">
             <li><strong>2 team members</strong> – Implemented the visualization using D3.js.</li>
-            <li><strong>1 team member</strong> – Designed the website UI for intuitive navigation.</li>
-            <li><strong>1 team member</strong> – Wrote the project report/writeup.</li>
+            <li><strong>2 team members</strong> – Designed the website's UI and wrote the project report/writeup.</li>
         </ul>
-        <p>Even though we divided the tasks, we worked together in person and constantly communicated, asking questions, debugging issues, and clarifying any next steps.</p>
+        <p>Even though we divided the tasks, we worked together in person and constantly communicated, asked questions, debugged issues, and clarified next steps.</p>
 
         <h3>Time Commitment</h3>
-        <p>The entire project, including the checkpoint, took approximately <strong>18 hours</strong>. The most time-consuming aspects were implementing D3.js and debugging the tooltip functionality.</p>
+        <p>The entire project, including the checkpoint, took approximately <strong>20 hours</strong>. The most time-consuming aspects were implementing D3.js and debugging the event listener functionality.</p>
     </section>
 </body>
 </html>

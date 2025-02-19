@@ -14,7 +14,7 @@
     </nav>
 
     <header>
-        <h1>Gait Asymmetry Analysis</h1>
+        <h1>Gait Asymmetry: Neurodegenerative Diseases Affect Movement</h1>
         <p>Explore how neurodegenerative diseases such as Parkinson’s, Huntington’s, and ALS impact mobility by analyzing key gait parameters including stride, stance, and swing intervals to identify asymmetries and movement irregularities.</p>
     </header>
 
@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="instructions">
         <h2>How Gait Asymmetry Affects Diseases</h2>
         <ul>
             <li><strong>Parkinson’s Disease:</strong> Causes shortened stride lengths and slower movements, leading to an uneven walking pattern.</li>
@@ -45,11 +45,12 @@
         </ul>
     </section>
 
-    <section class="container">
+    <section class="container" id="instructions">
         <h2>How to Use This Tool</h2>
         <p>1. <strong>Select Diseases:</strong> Choose one or more neurodegenerative conditions for comparison.</p>
         <p>2. <strong>Gait Parameters:</strong> Select exactly one from stride, stance, and swing intervals.</p>
         <p>3. <strong>Generate the Scatterplot:</strong> Visualize gait asymmetry and compare disease effects.</p>
+        <p>4. <strong>Using the Tooltip:</strong> Hover over a data point to see more information regarding an individual.</p>
     </section>
 
     <style>
@@ -66,8 +67,9 @@
         .checkbox-label { margin-right: 10px; }
     </style>
 
-    <h1>Gait Asymmetry Visualization</h1>
-    
+    <h1>Explore Gait Asymmetry</h1>
+    <p id="description">Note that ratio is the average left metric divided by the average right metric. Individuals with ratios over 1 indicate an asymmetrical bias towards their left-side, whereas individuals with ratios under 1 indicate a bias towards their right-side.</p>
+
     <div class="scatterplot-container">
         <svg width="800" height="600"></svg>
       

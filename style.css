@@ -6,6 +6,8 @@ body {
     background-color: #ffffff;  
     line-height:1.75; 
     color: #333;
+    max-width: 80%;
+    margin: auto;
 }
 
 header {
@@ -18,7 +20,7 @@ h1 {
     font-weight: 700;
     color: #222;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -70,12 +72,7 @@ h3 {
     width: 100%; /* Ensures responsiveness */
     max-width: 800px; /* Adjusted to make it smaller */
     height: auto;
-    margin-right: 15px;
-}
-
-label {
-    display: block;
-    margin: 5px 0;
+    margin-right: 850px;
 }
 
 button {
@@ -157,7 +154,7 @@ p {
 /* Navigation bar styling */
 nav {
     display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Evenly space links */
+    justify-content: space-evenly; /* Evenly space links */
     align-items: center; /* Align links vertically */
     padding: 0.5em 1em; /* Add padding around the nav bar */
     margin-bottom: 1em; /* Space below the navigation bar */
@@ -227,6 +224,63 @@ nav a:hover {
     gap: 15px;  
     max-width: 250px;  
 }
+
+#description {
+    /* padding: 10px; */
+    text-align: center;
+    
+    width: fit-content; /* Keeps the box tight around content */
+    margin: 10px auto; /* Centers horizontally */
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #333;
+    margin-right: 10px;
+}
+
+select {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+select:hover {
+    border-color: #0056b3;
+}
+
+/* Focus effect */
+select:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 5px rgba(0, 91, 187, 0.5);
+}
+
+/* Style dropdown options */
+option {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+#instructions p {
+    margin: 0px;
+}
+
+#instructions li {
+    margin: 0px;
+}
+
+
+
 
 
 
