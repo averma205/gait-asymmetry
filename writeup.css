@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Evenly space links */
+    align-items: center; /* Align links vertically */
+    padding: 0.5em 1em; /* Add padding around the nav bar */
+    margin-bottom: 1em; /* Space below the navigation bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Subtle gray border */
+}
+
+/* Navigation links styling */
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    text-align: center; /* Center the text */
+    padding: 0.5em; /* Add spacing around links */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth hover effect */
+}
+
+/* Highlight for current page */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200); /* Thicker bottom border */
+    padding-bottom: 0.1em; /* Adjust spacing to maintain alignment */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: var(--color-accent); /* Change color to the accent color */
+    border-bottom: 0.4em solid var(--color-accent); /* Add hover border effect */
+}
+/* Main Content Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Color Coding for Groups */
+.color-coding {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.color-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.gray { background: gray; }
+.blue { background: blue; }
+.red { background: red; }
+.black { background: black; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}

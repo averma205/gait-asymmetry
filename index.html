@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gait Asymmetry Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Scatterplot</a>
+        <a href="writeup.html">Writeup</a>
+    </nav>
+
+    <header>
+        <h1>Gait Asymmetry Analysis</h1>
+        <p>Explore how neurodegenerative diseases such as Parkinson’s, Huntington’s, and ALS impact mobility by analyzing key gait parameters including stride, stance, and swing intervals to identify asymmetries and movement irregularities.</p>
+    </header>
+
+    <section class="container">
+        <div class="content-wrapper">
+            <div class="image-container">
+                <img src="images/vis.png" alt="Gait cycle illustration" height="400" width="900">
+            </div>
+            <div class="text-content">
+                <h2>Understanding Gait Analysis</h2>
+                <p>The gait cycle is divided into multiple <strong>phases</strong>, which help researchers analyze walking patterns:</p>
+                <ul>
+                    <li><strong>Stance Interval:</strong> The phase where the foot remains in contact with the ground, providing support.</li>
+                    <li><strong>Swing Interval:</strong> The phase where the foot is lifted off the ground and moves forward for the next step.</li>
+                    <li><strong>Stride Interval:</strong> The full cycle from the moment one foot touches the ground until it touches again.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>How Gait Asymmetry Affects Diseases</h2>
+        <ul>
+            <li><strong>Parkinson’s Disease:</strong> Causes shortened stride lengths and slower movements, leading to an uneven walking pattern.</li>
+            <li><strong>Huntington’s Disease:</strong> Results in involuntary jerky movements, increasing gait instability.</li>
+            <li><strong>ALS (Amyotrophic Lateral Sclerosis):</strong> Weakens leg muscles, making stride intervals more inconsistent and reducing walking speed.</li>
+            <li><strong>Healthy Control:</strong> Serves as a baseline for comparison, representing normal gait patterns.</li>
+        </ul>
+    </section>
+
+    <section class="container">
+        <h2>How to Use This Tool</h2>
+        <p>1. <strong>Select Diseases:</strong> Choose one or more neurodegenerative conditions for comparison.</p>
+        <p>2. <strong>Gait Parameters:</strong> Select exactly one from stride, stance, and swing intervals.</p>
+        <p>3. <strong>Generate the Scatterplot:</strong> Visualize gait asymmetry and compare disease effects.</p>
+    </section>
+
+    <style>
+        .axis-label { font-size: 12px; }
+        .line { stroke: #000; stroke-width: 1.5; }
+        .tooltip { 
+            position: absolute; 
+            background: #fff; 
+            padding: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 3px; 
+            pointer-events: none; 
+        }
+        .checkbox-label { margin-right: 10px; }
+    </style>
+
+    <h1>Gait Asymmetry Visualization</h1>
+    
+    <div class="scatterplot-container">
+        <svg width="800" height="600"></svg>
+      
+        <div class="filter-container">
+          <fieldset>
+            <legend>Select Diseases:</legend>
+            <label class="checkbox-label">
+              <input type="checkbox" name="disease" value="Control"> Healthy
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="disease" value="Park"> Parkinson's Disease
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="disease" value="Hunt"> Huntington's Disease
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="disease" value="ALS"> ALS
+            </label>
+          </fieldset>
+      
+          <label for="metric-select">Select Metric:</label>
+          <select id="metric-select">
+            <option value="stride">Stride Interval</option>
+            <option value="swing">Swing Interval</option>
+            <option value="stance">Stance Interval</option>
+          </select>
+      
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

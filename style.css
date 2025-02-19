@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 20px;
+    background-color: #ffffff;  
+    line-height:1.75; 
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+} 
+
+h1 {
+    font-size: 36px;  
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 28px;  
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #007BFF;
+    margin-bottom: 8px;
+}
+
+.tab {
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: #FF6B6B;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    margin: 0 5px;
+}
+
+.tab.active {
+    background-color: #4CAF50;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    float: left;
+    width: 100%; /* Ensures responsiveness */
+    max-width: 800px; /* Adjusted to make it smaller */
+    height: auto;
+    margin-right: 15px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32);  
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}
+
+button:hover {
+    background: linear-gradient(90deg, #43A047, #1B5E20);
+    transform: translateY(-2px);  
+}
+
+
+#scatterplot {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+}
+
+.content-section {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);  /* ✅ Soft shadow */
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.content-section.active {
+    display: block;
+}
+
+
+
+/* List styling */
+ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;  
+    line-height: 1.6; 
+}
+
+ul li p {
+    margin: 0;  
+}
+
+/* Highlighted text for color-coded diseases */
+span {
+    font-weight: bold;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+}
+
+/* Improved spacing for readability */
+.content-section {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Evenly space links */
+    align-items: center; /* Align links vertically */
+    padding: 0.5em 1em; /* Add padding around the nav bar */
+    margin-bottom: 1em; /* Space below the navigation bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Subtle gray border */
+}
+
+/* Navigation links styling */
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    text-align: center; /* Center the text */
+    padding: 0.5em; /* Add spacing around links */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth hover effect */
+}
+
+/* Highlight for current page */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200); /* Thicker bottom border */
+    padding-bottom: 0.1em; /* Adjust spacing to maintain alignment */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: var(--color-accent); /* Change color to the accent color */
+    border-bottom: 0.4em solid var(--color-accent); /* Add hover border effect */
+}
+
+
+#selectionForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+fieldset {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Ensure button stays below */
+#selectionForm button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+nav {
+    --border-color: oklch(50% 10% 200 / 40%); /* Darker and semi-transparent */
+    border-bottom-color: var(--border-color);
+}
+nav a:hover {
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+.scatterplot-container {
+    display: flex;  
+    align-items: flex-start;  
+    gap: 20px;  
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;  
+    max-width: 250px;  
+}
+
+
+
+
+

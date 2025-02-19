@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Writeup</title>
+    <link rel="stylesheet" href="writeup.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Scatterplot</a>
+        <a href="writeup.html" class="active">Writeup</a>
+    </nav>
+
+    <section class="container">
+        <h2>Final Writeup</h2>
+        <p>For this project, we developed an interactive visualization to explore the effects of neurodegenerative diseases on gait asymmetry. Our goal is to analyze gait asymmetry through three metrics: stride interval, swing interval, and stance interval.
+            Our dataset was titled <strong>Gait in Neurodegenerative Disease Database</strong> and includes data from:</p>
+        <ul class="stats-list">
+            <li><strong>15</strong> subjects with Parkinson’s disease</li>
+            <li><strong>20</strong> with Huntington’s disease</li>
+            <li><strong>13</strong> with ALS</li>
+            <li><strong>16</strong> healthy control group subjects</li>
+        </ul>
+
+        <h3>Visualization Approach</h3>
+        <p>We used a scatterplot to display our findings, analyzing the following six metrics:</p>
+        <ul>
+            <li>Left Stride Interval (sec) vs. Right Stride Interval (sec)</li>
+            <li>Left Swing Interval (sec) vs. Right Swing Interval (sec)</li>
+            <li>Left Stance Interval (sec) vs. Right Stance Interval (sec)</li>
+        </ul>
+        <p>We mapped left-side metrics on the y-axis and right-side metrics on the x-axis (for example, Left Swing vs. Right Swing), allowing users to track gait asymmetry in individual subjects. We took the averages of every individuals’ left-to-right gait metric ratio. </p>
+
+        <h3>Comparison of Visualization Methods</h3>
+        <p>We initially tried using a histogram and a bar chart to visualize our findings, but decided that a scatter plot provided the most insight. The histogram only showed the left-to-right ratio distribution, and the bar chart only summarized the data for each disease. The scatterplot, on the other hand, allowed us to compare the ratios for each individual subject.</p>
+
+        <h3>Key Insights</h3>
+        <p>A reference line, <strong>y = x</strong>, was added to indicate perfect symmetry. Points above this line represent individuals with a higher left-side metric, while points below indicate the opposite. This helps users quickly identify asymmetry trends across different diseases.</p>
+
+        <h3>Color Coding & Interactivity</h3>
+        <p>Each disease group is color-coded based on its awareness ribbon:</p>
+        <div class="color-coding">
+            <span class="color-box gray"></span> Parkinson’s (Gray)
+            <span class="color-box blue"></span> Huntington’s (Blue)
+            <span class="color-box red"></span> ALS (Red)
+            <span class="color-box black"></span> Healthy Control (Black)
+        </div>
+        <p>Interactive features include:</p>
+        <ul>
+            <li><strong>Dynamic Filtering:</strong> Users are able to select and deselect disease groups to focus on specific comparisons. This allows for a focused comparison (for example, comparing only Parkinson’s and ALS or comparing all four groups at once)</li>
+            <li><strong>Tooltip Feature:</strong> Provides more detailed information on the individual: hovering over a data point reveals the exact values for that subject. </li>
+        </ul>
+        <p>We initially considered creating separate scatterplots for each disease, allowing side-by-side comparisons. However, we realized that combining all the disease groups into a single scatterplot per metric would be a better idea, as it simplifies comparison across diseases by consolidating data into a single plot and making patterns more apparent.</p>
+
+        <h3>Development Process</h3>
+        <p>our team worked together closely throughout the project. For the checkpoint submission, each group member created 1-2 plots, which we then discussed the pros and cons of. We then spent several hours brainstorming the final visualization and deciding which features to implement, how to increase interactivity, and how to structure our GitHub page. </p>
+        <p>We split tasks efficiently:</p>
+        <ul class="team-roles">
+            <li><strong>2 team members</strong> – Implemented the visualization using D3.js.</li>
+            <li><strong>1 team member</strong> – Designed the website UI for intuitive navigation.</li>
+            <li><strong>1 team member</strong> – Wrote the project report/writeup.</li>
+        </ul>
+        <p>Even though we divided the tasks, we worked together in person and constantly communicated, asking questions, debugging issues, and clarifying any next steps.</p>
+
+        <h3>Time Commitment</h3>
+        <p>The entire project, including the checkpoint, took approximately <strong>18 hours</strong>. The most time-consuming aspects were implementing D3.js and debugging the tooltip functionality.</p>
+    </section>
+</body>
+</html>
